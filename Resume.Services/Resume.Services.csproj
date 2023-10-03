@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Resume.DataAccess\Resume.DataAccess.csproj" />
+    <ProjectReference Include="..\Resume.Domain\Resume.Domain.csproj" />
+    <ProjectReference Include="..\Resume.DTOs\Resume.DTOs.csproj" />
+    <ProjectReference Include="..\Resume.Mappers\Resume.Mappers.csproj" />
+    <ProjectReference Include="..\Resume.Shared\Resume.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
