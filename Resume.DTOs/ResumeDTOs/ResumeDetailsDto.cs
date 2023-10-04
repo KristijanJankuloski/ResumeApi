@@ -1,4 +1,5 @@
 ﻿using Resume.DTOs.EducationDTOs;
+using Resume.DTOs.ExperienceDTOs;
 
 namespace Resume.DTOs.ResumeDTOs
 {

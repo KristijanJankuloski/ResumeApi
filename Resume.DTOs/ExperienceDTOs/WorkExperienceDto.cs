@@ -1,4 +1,4 @@
-﻿namespace Resume.DTOs
+﻿namespace Resume.DTOs.ExperienceDTOs
 {
     public class WorkExperienceDto
     {

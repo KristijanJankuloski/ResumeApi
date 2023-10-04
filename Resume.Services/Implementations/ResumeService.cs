@@ -3,6 +3,7 @@ using Resume.Domain.Models;
 using Resume.DTOs.ResumeDTOs;
 using Resume.Mappers;
 using Resume.Services.Interfaces;
+using Resume.Shared.Response;
 
 namespace Resume.Services.Implementations
 {
@@ -12,6 +13,11 @@ namespace Resume.Services.Implementations
         public ResumeService(IResumeRepository resumeRepository)
         {
             _repository = resumeRepository;
+        }
+
+        public Task<Response> CreateResume(ResumeCreateDto dto, string userId)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task<ResumeDetailsDto> GetDetails(int id)

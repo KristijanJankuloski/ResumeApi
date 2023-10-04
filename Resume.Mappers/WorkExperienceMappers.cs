@@ -1,5 +1,5 @@
 ﻿using Resume.Domain.Models;
-using Resume.DTOs;
+using Resume.DTOs.ExperienceDTOs;
 
 namespace Resume.Mappers
 {

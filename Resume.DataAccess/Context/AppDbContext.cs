@@ -11,7 +11,11 @@ namespace Resume.DataAccess.Context
         public DbSet<WorkExperience> WorkExperiences { get; set; }
         public DbSet<EducationEntry> EducationEntries { get; set; }
         public DbSet<Certification> Certifications { get; set; }
-        public AppDbContext(DbContextOptions options): base(options) {}
+
+        public AppDbContext(DbContextOptions options) : base(options)
+        {
+            Database.Migrate();
+        }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

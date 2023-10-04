@@ -48,5 +48,25 @@ namespace Resume.Services.AuthService.Implementations
                 throw new Exception(string.Join("\n", result.Errors.Select(e => e.Description)));
             return Response.Success;
         }
+
+        public async Task<Response> UpdateUser(UserUpdateDto dto, string userId)
+        {
+            User user = await _userManager.FindByIdAsync(userId);
+            if (user == null)
+                return new Response("User not found");
+
+            if(dto.FirstName != null)
+                user.FirstName = dto.FirstName;
+
+            if (dto.LastName != null)
+                user.LastName = dto.LastName;
+            if(dto.PhoneNumber != null)
+                await _userManager.SetPhoneNumberAsync(user, dto.PhoneNumber);
+
+            var result = await _userManager.UpdateAsync(user);
+            if (!result.Succeeded)
+                return new Response(result.Errors.Select(e => e.Description).ToList());
+            return Response.Success;
+        }
     }
 }
